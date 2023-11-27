@@ -1,0 +1,15 @@
+
+create table cursos(
+id_cur varchar(3) primary KEY,
+nombre varchar(15) not null,
+nivel varchar(4) not null
+);
+
+
+create table estudiante(
+cedula varchar(10) primary key,
+nombre varchar(25) not null,
+apellido varchar(25) not null,
+curso varchar(3) not null,
+Foreign key (curso) references cursos(id_cur) 
+);
